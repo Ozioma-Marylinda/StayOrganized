@@ -1,0 +1,150 @@
+/* ===== GENERAL PAGE STYLE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #dddecb;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===== HEADINGS ===== */
+h1 {
+  font-size: 2.4rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+h3 {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* ===== FORM STYLING ===== */
+.todoForm {
+  background: rgb(180, 180, 148);
+  padding: 20px;
+  width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.todoForm label {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: -5px;
+}
+
+.todoFormInput {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.todoFormInput:focus {
+  outline: none;
+  border-color: #dddecb;
+}
+
+.todoFormInput.error {
+  border-color: red;
+}
+
+/* Add button */
+.todoForm input[type="submit"] {
+  padding: 10px;
+  background: blue;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.todoForm input[type="submit"]:hover {
+  background: #005fcc;
+}
+
+/* ===== TODOS LIST CONTAINER ===== */
+.ourTodos {
+  margin-top: 25px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: ;
+  border-radius: 5px;
+}
+
+.todoDivItems {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #4b4b40;
+  color: white;
+  padding: 12px 15px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  gap: 10px;
+  flex-wrap: wrap;      /* 🔥 ALLOWS TEXT + BUTTONS TO MOVE TO NEXT LINE */
+  max-width: 100%;
+}
+
+
+.todoDivItems p {
+  flex: 1;
+  font-size: 16px;
+  overflow-wrap: break-word;   /* modern */
+  word-break: break-word;      /* fallback */
+  white-space: normal;         /* ensure wrapping */
+  max-width: 100%;
+}
+
+.actions {
+  display: flex;
+  flex-shrink: 0;
+  gap: 10px;
+}
+
+/* ===== EDIT & DELETE BUTTONS ===== */
+.todoDivItems button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+  margin-left: 5px;
+}
+
+.todoDivItems button:first-of-type {
+  background: green;
+  color: white;
+  font-weight: 500;
+}
+
+.todoDivItems button:first-of-type:hover {
+  background: #dddecb;
+}
+
+.todoDivItems button:last-of-type {
+  background: #ff4d4d;
+  color: white;
+}
+
+.todoDivItems button:last-of-type:hover {
+  background: #d93636;
+}
