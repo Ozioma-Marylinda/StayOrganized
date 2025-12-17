@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback form</title>
+  <link rel="stylesheet" href="feedbackform.css">
+</head>
+<body>
+  <form class="feedback-form" novalidate>
+    <h1>Simple Feedback Form</h1>
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email" placeholder="Enter your email" required class="feedback-email">
+    <div class="feedbackEmail-error"></div>
+    
+    
+    <label for="age">Age</label>
+    <input type="number" id="age" name="age" placeholder="Your age" required min="18" max="99" class="feedback-age">
+    <div class="feedbackAge-error"></div>
+   
+    <label for="Feedback message"></label>
+    <p>We would love to hear your thoughts, suggestions, concerns or problems with anything so we can improve!</p>
+    <textarea name="feedback" id="feedback" placeholder="Kindly provide your feedback" required minlength="100" maxlength="5000" class="feedback-text"></textarea>
+    <div class="feedbackMsg-error"></div>
+
+    <input type="submit" class="button">
+    
+  </form>
+
+  <script src="feedback.js"></script>
+</body>
+</html>
